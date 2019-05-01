@@ -1,0 +1,94 @@
+.hero
+    height: 100vh
+    width: 100%
+    p
+        text-shadow: (0px 6px 22px 0px rgba(0,0,0,0.08))
+    .left
+        position: absolute
+        height: 100%
+        width: 70%
+        background-color: #e0e0e0
+        z-index: -1
+    
+nav
+    width: 90%
+    margin: 0 auto
+    line-height: 60px
+    text-align: right
+    .logo
+        float: left
+        text-decoration: none
+        color: white
+        font-size: 30px
+        font-weight: 600
+    .desktopNav
+        a
+            color: grey
+            text-shadow: (0px 6px 22px 0px rgba(0,0,0,0.08))
+            text-decoration: none
+            padding-left: 40px
+            transition: color 2s ease
+            &:hover
+                color: black
+
+.mobileNav
+    display: none
+
+.product
+  position: absolute
+  top: 20%
+  left: 60%
+  img
+    width: 500px
+    height: 500px
+
+.buttons
+  right: 80px
+  position: absolute
+  top: 40%
+  margin-right: 10px
+  #prev
+    display: flex
+    color: grey
+    background: #fff
+    padding-top: 30px
+    cursor: pointer
+    font-size: 20px
+    &:hover
+        color: black
+  #next
+    color: grey
+    background: #fff
+    padding-top: 30px
+    cursor: pointer
+    font-size: 20px
+    &:hover
+        color: black
+
+
+.heroContent
+    margin: 30vh 0 0 15%
+    p 
+        color: white
+        margin-bottom: 30px
+        opacity: 0.9
+    h1
+        color: white
+.scroll
+    display: flex
+    align-items: center
+    position: absolute
+    right: 1.7%
+    bottom: 63px
+    transform: rotate(270deg)
+    p
+        color: grey
+        font-size: 16px
+        text-shadow: (0px 6px 22px 0px rgba(0,0,0,0.08))
+.line
+    height: 2px
+    width: 70px
+    margin-right: 10px
+    background-color: grey
+    +box-shadow((0px 6px 22px 0px rgba(0,0,0,0.08))) 
+
