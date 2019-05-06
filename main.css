@@ -95,17 +95,24 @@ nav .logo {
   float: left;
   text-decoration: none;
   color: white;
-  font-size: 30px;
+  font-size: 4rem;
   font-weight: 600;
+}
+
+nav .desktopNav {
+  right: 1.7%;
 }
 
 nav .desktopNav a {
   color: grey;
   text-shadow: 0px 6px 22px 0px rgba(0, 0, 0, 0.08);
   text-decoration: none;
-  padding-left: 40px;
   -webkit-transition: color 2s ease;
   transition: color 2s ease;
+  margin-top: 2rem;
+  color: grey;
+  font-size: 18px;
+  padding: 15px;
 }
 
 nav .desktopNav a:hover {
@@ -133,8 +140,6 @@ nav .desktopNav a:hover {
 .pieces-slider__image {
   max-width: 600px;
   max-height: 400px;
-  -webkit-filter: grayscale(80%);
-          filter: grayscale(80%);
 }
 
 .js .pieces-slider__image {
@@ -173,7 +178,7 @@ nav .desktopNav a:hover {
   cursor: pointer;
   font-size: 30px;
   right: 1.7%;
-  top: 30%;
+  top: 20%;
   -webkit-transition: color 2s;
   transition: color 2s;
 }
@@ -237,6 +242,34 @@ nav .desktopNav a:hover {
   background-color: grey;
   -webkit-box-shadow: 0px 6px 22px 0px rgba(0, 0, 0, 0.08);
   box-shadow: 0px 6px 22px 0px rgba(0, 0, 0, 0.08);
+}
+
+/* Details Button (+ sign) */
+.details-btn {
+  margin-bottom: 40px;
+  font-weight: bold;
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 1px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.details-btn:hover svg {
+  -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+}
+
+.details-btn svg {
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease;
+  height: 11px;
+  margin-left: 10px;
 }
 
 .flex-2 {

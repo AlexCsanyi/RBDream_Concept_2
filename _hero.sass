@@ -19,15 +19,19 @@ nav
         float: left
         text-decoration: none
         color: white
-        font-size: 30px
+        font-size: 4rem
         font-weight: 600
     .desktopNav
+        right: 1.7%
         a
             color: grey
             text-shadow: (0px 6px 22px 0px rgba(0,0,0,0.08))
             text-decoration: none
-            padding-left: 40px
             transition: color 2s ease
+            margin-top: 2rem
+            color: grey
+            font-size: 18px
+            padding: 15px
             &:hover
                 color: black
 
@@ -49,7 +53,6 @@ nav
 .pieces-slider__image
   max-width: 600px
   max-height: 400px
-  filter: grayscale(80%)
 
 .js .pieces-slider__image
   visibility: hidden
@@ -80,7 +83,7 @@ nav
     cursor: pointer
     font-size: 30px
     right: 1.7%
-    top: 30%
+    top: 20%
     transition: color 2s 
     &:hover
         color: black
@@ -121,3 +124,22 @@ nav
     background-color: grey
     +box-shadow((0px 6px 22px 0px rgba(0,0,0,0.08))) 
 
+
+/* Details Button (+ sign) */
+.details-btn
+        margin-bottom: 40px
+        font-weight: bold
+        font-size: 1rem
+        display: flex
+        align-items: center
+        letter-spacing: 1px
+        cursor: pointer
+        color: #ffffff
+
+        &:hover svg
+            transform: rotate(405deg)
+
+        svg
+            transition: all .6s ease
+            height: 11px
+            margin-left: 10px
