@@ -116,63 +116,83 @@ nav .desktopNav a:hover {
   display: none;
 }
 
-.product {
+.pieces-slider {
   position: absolute;
+  text-align: center;
+  overflow: hidden;
+  left: 45%;
   top: 20%;
-  left: 60%;
 }
 
-.product .slide {
-  width: 500px;
-  height: 500px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.slide1 {
-  background-image: url("/images/product.png");
-}
-
-.slide2 {
-  background-image: url("/images/product_2.png");
-}
-
-.slide3 {
-  background-image: url("/images/product_3.png");
-}
-
-.buttons {
-  right: 80px;
+/* Make all slides absolutes and hide them */
+.js .pieces-slider__slide {
   position: absolute;
-  top: 40%;
-  margin-right: 10px;
 }
 
-.buttons #prev {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: grey;
+/* Define image dimensions and also hide them */
+.pieces-slider__image {
+  max-width: 600px;
+  max-height: 400px;
+  -webkit-filter: grayscale(80%);
+          filter: grayscale(80%);
+}
+
+.js .pieces-slider__image {
+  visibility: hidden;
+}
+
+/* Hide the titles */
+.js .pieces-slider__text {
+  text-indent: -9999px;
+}
+
+/* Canvas with viewport width and height */
+.js .pieces-slider__canvas {
+  position: relative;
+  width: 50vw;
+  height: 50vh;
+  -webkit-transition: 0.2s opacity;
+  transition: 0.2s opacity;
+}
+
+/* Class for when we resize */
+.pieces-slider__canvas--hidden {
+  opacity: 0;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+/* Control buttons */
+.pieces-slider__button {
+  position: absolute;
+  color: #e0e0e0;
+}
+
+.pieces-slider__button--prev {
   background: #fff;
-  padding-top: 30px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 30px;
+  right: 1.7%;
+  top: 30%;
+  -webkit-transition: color 2s;
+  transition: color 2s;
 }
 
-.buttons #prev:hover {
+.pieces-slider__button--prev:hover {
   color: black;
 }
 
-.buttons #next {
-  color: grey;
+.pieces-slider__button--next {
   background: #fff;
-  padding-top: 30px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 30px;
+  right: 1.7%;
+  top: 60%;
+  -webkit-transition: color 2s;
+  transition: color 2s;
 }
 
-.buttons #next:hover {
+.pieces-slider__button--next:hover {
   color: black;
 }
 
@@ -424,6 +444,24 @@ footer p {
   }
   .scroll {
     display: none;
+  }
+}
+
+/* Media queries with styles for smaller screens */
+@media screen and (max-width: 720px) {
+  .pieces-slider__image {
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 55em) {
+  .pieces-slider__canvas {
+    width: 100vw;
+    height: 100vw;
+  }
+  .pieces-slider__button {
+    width: 60px;
+    height: 60px;
   }
 }
 /*# sourceMappingURL=main.css.map */
