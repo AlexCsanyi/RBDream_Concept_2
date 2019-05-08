@@ -41,77 +41,83 @@
   </head>
   <body>
     <div class="hero">
-      <div class="left"></div>
-      <div class="right"></div>
-
-      <!-- Pieces Slider -->
-      <div class="pieces-slider">
-        <!-- Each slide with corresponding image and text -->
-        <div class="pieces-slider__slide">
-          <img class="pieces-slider__image" src="images/1.png" alt="" />
-          <div class="pieces-slider__text">DAIWA Emblem</div>
-        </div>
-        <div class="pieces-slider__slide">
-          <img class="pieces-slider__image" src="images/2.png" alt="" />
-          <div class="pieces-slider__text">OKUMA Tatula</div>
-        </div>
-        <div class="pieces-slider__slide">
-          <img class="pieces-slider__image" src="images/3.png" alt="" />
-          <div class="pieces-slider__text">SHIMANO Spheros</div>
-        </div>
-        <div class="pieces-slider__slide">
-          <img class="pieces-slider__image" src="images/4.png" alt="" />
-          <div class="pieces-slider__text">ATC</div>
-        </div>
-        <div class="pieces-slider__slide">
-          <img class="pieces-slider__image" src="images/5.png" alt="" />
-          <div class="pieces-slider__text">PENN Slammer</div>
-        </div>
-        <!-- Canvas to draw the pieces -->
-        <canvas class="pieces-slider__canvas"></canvas>
-        <!-- Slider buttons: prev and next -->
-        <button class="pieces-slider__button pieces-slider__button--prev">
-          <i class="fas fa-arrow-up"></i>
-        </button>
-        <button class="pieces-slider__button pieces-slider__button--next">
-          <i class="fas fa-arrow-down"></i>
-        </button>
-      </div>
-
       <nav>
-        <a href="#" class="logo">RB DREAM</a>
-        <div class="desktopNav">
-          <a href="#">About</a>
-          <a href="#">Blog</a>
-        </div>
-        <div class="mobileNav">
-          <a href="#">&#9776;</a>
-        </div>
+        <ul class="main-nav">
+          <li><a href="#" class="logo">RB DREAM</a></li>
+          <li><a class="menu-item" href="#">About</a></li>
+          <li><a class="menu-item" href="#">Blog</a></li>
+        </ul>
       </nav>
-      <div class="heroContent">
-        <h1>Visit our shop</h1>
-        <p>
-          See what we have in store and contact us if you would like to know
-          more
-        </p>
-        <div class="details-btn">
-          CLICK TO CONTACT
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
-          </svg>
+
+      <!-- Left Side -->
+      <div class="left">
+        <div class="heroContent">
+          <h1>Visit our shop</h1>
+          <p>
+            See what we have in store and contact us if you would like to know
+            more
+          </p>
+          <div class="details-btn">
+            CLICK TO CONTACT
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z" />
+            </svg>
+          </div>
+          <a href="#" class="btn"><i class="fas fa-store-alt"></i>Explore</a>
         </div>
-        <a href="#" class="btn"><i class="fas fa-store-alt"></i>Explore</a>
       </div>
+      <!-- End of left Side -->
+
+      <!-- Right Side -->
+      <div class="right">
+        <!-- Pieces Slider -->
+        <div class="pieces-slider">
+          <!-- Each slide with corresponding image and text -->
+          <div class="pieces-slider__slide">
+            <img class="pieces-slider__image" src="images/1.png" alt="" />
+            <div class="pieces-slider__text">DAIWA Emblem</div>
+          </div>
+          <div class="pieces-slider__slide">
+            <img class="pieces-slider__image" src="images/2.png" alt="" />
+            <div class="pieces-slider__text">OKUMA Tatula</div>
+          </div>
+          <div class="pieces-slider__slide">
+            <img class="pieces-slider__image" src="images/3.png" alt="" />
+            <div class="pieces-slider__text">SHIMANO Spheros</div>
+          </div>
+          <div class="pieces-slider__slide">
+            <img class="pieces-slider__image" src="images/4.png" alt="" />
+            <div class="pieces-slider__text">ATC</div>
+          </div>
+          <div class="pieces-slider__slide">
+            <img class="pieces-slider__image" src="images/5.png" alt="" />
+            <div class="pieces-slider__text">PENN Slammer</div>
+          </div>
+          <!-- Canvas to draw the pieces -->
+          <canvas class="pieces-slider__canvas"></canvas>
+          <!-- Slider buttons: prev and next -->
+          <button class="pieces-slider__button pieces-slider__button--prev">
+            <i class="fas fa-arrow-up"></i>
+          </button>
+          <button class="pieces-slider__button pieces-slider__button--next">
+            <i class="fas fa-arrow-down"></i>
+          </button>
+        </div>
+      </div>
+      <!-- End of Right Side -->
       <div class="scroll">
         <div class="line"></div>
         <p>SCROLL</p>
       </div>
     </div>
+    <!-- End of Hero Content -->
+
+    <!-- Section 2 -->
     <div class="flex-2">
       <div class="flexItem">
         <img src="images/surf_image.png" alt="surf image" class="mobileHide" />
