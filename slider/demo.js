@@ -64,8 +64,8 @@
 
   // Options for numbers
   var numberOptions = {
-    color: "#e0e0e0",
-    backgroundColor: "#fff",
+    color: "#fff",
+    backgroundColor: "#e0e0e0",
     fontSize: function() {
       return windowWidth > 720 ? 30 : 15;
     },
