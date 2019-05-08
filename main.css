@@ -114,6 +114,12 @@ nav .desktopNav a {
   text-shadow: 0px 6px 22px 0px rgba(0, 0, 0, 0.08);
   text-decoration: none;
   padding: 10px;
+  -webkit-transition: color 2s ease;
+  transition: color 2s ease;
+}
+
+nav .desktopNav a:hover {
+  color: black;
 }
 
 .mobileNav {
