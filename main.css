@@ -93,10 +93,14 @@ a {
 
 /* Nav style */
 header {
-  text-align: center;
+  text-align: left;
   position: absolute;
   width: 100%;
   z-index: 3;
+}
+
+.logo {
+  font-size: 130%;
 }
 
 .nav-toggle {
@@ -153,7 +157,14 @@ nav {
   text-align: right;
   top: 100%;
   right: 0;
-  display: none;
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: -webkit-transform 400ms ease-in-out;
+  transition: -webkit-transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
 }
 
 nav ul {
@@ -170,10 +181,20 @@ nav li {
 nav a {
   text-decoration: none;
   text-transform: uppercase;
+  opacity: 0;
+  -webkit-transition: opacity 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out;
 }
 
 .nav-toggle:checked ~ nav {
-  display: block;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  -webkit-transition: opacity 250ms ease-in-out 250ms;
+  transition: opacity 250ms ease-in-out 250ms;
 }
 
 .pieces-slider {
@@ -454,6 +475,51 @@ footer p {
   opacity: 0.5;
 }
 
+@media screen and (min-width: 800px) {
+  .nav-toggle-label {
+    display: none;
+  }
+  header {
+    margin-top: 1rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 11% 16% 64% 11%;
+        grid-template-columns: 11% 16% 64% 11%;
+  }
+  nav {
+    all: unset;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3 / 4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav a {
+    opacity: 1;
+  }
+  .logo {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+  }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+}
+
 @media screen and (max-width: 1600px) {
   .flex-2 {
     width: 100%;
@@ -525,6 +591,9 @@ footer p {
   }
   .scroll {
     display: none;
+  }
+  .logo {
+    margin-left: 5%;
   }
 }
 

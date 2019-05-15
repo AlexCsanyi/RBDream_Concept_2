@@ -17,10 +17,13 @@
 
 /* Nav style */
 header
-    text-align: center
+    text-align: left
     position: absolute
     width: 100%
     z-index: 3
+
+.logo
+    font-size: 130%
 
 .nav-toggle
     display: none
@@ -64,7 +67,9 @@ nav
     text-align: right
     top: 100%
     right: 0
-    display: none
+    transform: scale(1,0)
+    transform-origin: top
+    transition: transform 400ms ease-in-out
     ul
         list-style: none
         margin: 0
@@ -78,10 +83,15 @@ nav
     a
         text-decoration: none
         text-transform: uppercase
+        opacity: 0
+        transition: opacity 150ms ease-in-out
 
 .nav-toggle:checked ~ nav
-  display: block
+  transform: scale(1,1)
 
+.nav-toggle:checked ~ nav a
+  opacity: 1
+  transition: opacity 250ms ease-in-out 250ms
 
 .pieces-slider
   position: relative

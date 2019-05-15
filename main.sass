@@ -5,6 +5,33 @@
 @import cont
 
 // Responsive code
+@media screen and (min-width: 800px)
+    .nav-toggle-label
+        display: none
+    
+    header
+        margin-top: 1rem
+        display: grid
+        grid-template-columns: 11% 16% 64% 11%
+    nav
+        all: unset
+        grid-column: 3 / 4
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        a
+            opacity: 1
+    .logo
+        grid-column: 2 / 3
+    nav
+        ul
+            display: flex
+    nav
+        li
+            margin-left: 3em
+            margin-bottom: 0
+            
+
 @media screen and (max-width: 1600px)
     .flex-2
         width: 100%
@@ -52,6 +79,9 @@
             font-size: 24px
     .scroll
         display: none
+
+    .logo
+        margin-left: 5%
 
 /* Media queries with styles for smaller screens */
 @media screen and (max-width: 720px)
